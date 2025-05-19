@@ -7,7 +7,7 @@ console.log('Esercizio parole palindrome')
 //Creare una funzione per capire se la parola inserita è palindroma
 
 
-
+/*
 // Chiedo all’utente di inserire una parola
 const parolaInserita = prompt("Inserisci una parola:");
 console.log(parolaInserita)
@@ -35,8 +35,28 @@ if (èPalindroma(parolaInserita)) {
 } else {
   console.log("La parola non è palindroma.");
 }
+  */
 
 
 
 
 
+//USANDO LA DOCUMENTAZIONE MDN
+
+const parolaUtente = prompt("Inserisci una parola:");
+console.log(parolaUtente)
+
+// 2. Funzione per verificare se una parola è palindroma
+function isPalindroma(parola) {
+  // inverto la parola
+  const parolaInvertita = parola.split('').reverse().join('');  // Prendo la parola la divido in singole lettere poi la inverto e poi la ricompongo in una nuova parola
+  
+  return parola === parolaInvertita; //verifico se combacia
+}
+
+// verifico la parola inserita dall'utente se è palindroma o no 
+if (isPalindroma(parolaUtente)) {
+  console.log("La parola è palindroma!");
+} else {
+  console.log("La parola NON è palindroma.");
+}
